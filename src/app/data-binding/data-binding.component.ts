@@ -7,6 +7,23 @@ import { Component } from '@angular/core';
 })
 export class DataBindingComponent {
 
+valorAtual: string = '';
+valorSalvo: string = '';
+
+salvarValor(event:any) {
+  console.log(event)
+  this.valorSalvo = (event.target as HTMLInputElement).value
+  }
+
+
+onKeyUp(event: KeyboardEvent) {
+ this.valorAtual = (event.target as HTMLInputElement).value
+
+}
+botaoClicado() {
+throw new Error('Method not implemented.');
+}
+
   url:string = 'http://wes.com'
   cursoAngular:boolean = true
 
